@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Grid Graph Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Power Grid Graph Prototype</h1>
+      <p>A simple website presenting the graph representation and mathematical model of an electrical power grid.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Graph Representation and Prototype Design</h2>
+      <p>The electrical power grid is represented as an undirected graph where:</p>
+      <ul>
+        <li>Vertices represent power stations and substations</li>
+        <li>Edges represent transmission lines connecting them</li>
+        <li>An undirected graph is used because electricity can flow in both directions</li>
+      </ul>
+      <h3>Prototype Graph</h3>
+      <div class="diagram">
+        <div class="diagram-column">
+          <div class="node station">P1</div>
+          <div class="vertical-line"></div>
+          <div class="node substation">S1</div>
+          <div class="vertical-line"></div>
+          <div class="node station">P2</div>
+        </div>
+        <div class="diagram-branch">
+          <div class="branch-connector"></div>
+          <div class="branch-row">
+            <div class="horizontal-line"></div>
+            <div class="node substation">S2</div>
+            <div class="horizontal-line"></div>
+            <div class="node substation">S3</div>
+          </div>
+        </div>
+      </div>
+      <p>This prototype helps visualize how electrical components are connected.</p>
+    </section>
+
+    <section class="card math-model">
+      <h2>Mathematical Model of the Power Grid</h2>
+      <p>The power grid is mathematically represented as a graph:</p>
+      <pre><code>G = (V, E)</code></pre>
+      <p>Where:</p>
+      <ul>
+        <li><strong>G</strong> = Graph representing power grid</li>
+        <li><strong>V</strong> = Set of vertices (power stations and substations)</li>
+        <li><strong>E</strong> = Set of edges (transmission lines)</li>
+      </ul>
+      <div class="model-block">
+        <div>
+          <strong>Vertex Set:</strong>
+          <pre><code>V = {P1, P2, S1, S2, S3}</code></pre>
+        </div>
+        <div>
+          <strong>Edge Set:</strong>
+          <pre><code>E = {(P1,S1), (P2,S1), (S1,S2), (S2,S3)}</code></pre>
+        </div>
+      </div>
+      <div class="degrees">
+        <h3>Degree of Each Vertex</h3>
+        <ul>
+          <li>deg(P1) = 1</li>
+          <li>deg(P2) = 1</li>
+          <li>deg(S1) = 3</li>
+          <li>deg(S2) = 2</li>
+          <li>deg(S3) = 1</li>
+        </ul>
+        <p><strong>Node S1 has the highest degree → most important node.</strong></p>
+      </div>
+      <div class="conclusion">
+        <h3>Conclusion</h3>
+        <ul>
+          <li>Graph helps analyze power grid structure</li>
+          <li>Helps identify critical stations and connections</li>
+          <li>Used to study reliability and vulnerability of the network</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Designed to mirror the slide content for a power grid prototype and mathematical model.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
