@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LC Problem Randomizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <h1>LeetCode Problem Randomizer</h1>
+      <p>Selects 4 practice problems from five core topics with a balanced difficulty mix.</p>
+      <div class="buttons-row">
+        <button id="generateButton" class="action-button">Generate Problems</button>
+        <button id="refreshButton" class="action-button secondary">Refresh</button>
+      </div>
+      <div class="notes">
+        <p><strong>Topics:</strong> Two Pointers & Sliding Window, Binary Search Variants, BFS / DFS, Dynamic Programming, Stack & Interval Merging.</p>
+        <p><strong>Distribution:</strong> Roughly 70% Medium, 20% Easy, 10% Hard. Repeats are de-prioritized across selections.</p>
+      </div>
+    </section>
+
+    <section id="resultsSection" class="results hidden">
+      <h2>Selected Problems</h2>
+      <div id="resultsContainer" class="result-grid"></div>
+      <div id="historySection" class="history">
+        <h3>Recently Selected</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
